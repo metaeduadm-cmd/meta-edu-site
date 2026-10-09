@@ -3,69 +3,233 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meta Educação</title>
-  <meta name="description" content="Meta Educação — Lorem ipsum dolor sit amet.">
+  <title>Meta Educação | Transformando a educação através da tecnologia</title>
+  <meta name="description" content="A Meta Educação é uma empresa brasileira de tecnologia educacional que desenvolve soluções para transformar a educação por meio da inovação e da ampliação do acesso ao conhecimento.">
+  <meta name="theme-color" content="#FF8500">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meta Educação">
+  <meta property="og:description" content="Conhecimento que transforma. Tecnologia que aproxima.">
+  <meta property="og:image" content="/assets/logo-meta.png">
+  <link rel="icon" type="image/png" href="/assets/logo-meta.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="#" class="logo">Meta<span>Educação</span></a>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#contato" class="btn btn-sm">Contato</a>
+  <a href="#inicio" class="skip">Pular para o conteúdo</a>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Meta Educação — início">
+        <img src="assets/logo-meta.png" alt="Meta Educação" width="744" height="308">
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#inicio">Início</a>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#contato">Contato</a>
+        <a href="#contato" class="btn btn-primary btn-sm">Fale conosco</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-        <a href="#contato" class="btn">Quero saber mais</a>
+    <!-- 01 HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow reveal">EdTech · Belém, Pará</span>
+          <h1 class="reveal">Transformando a <em>educação</em> através da <em>tecnologia</em>.</h1>
+          <p class="lead reveal">Conectamos conhecimento, inovação e tecnologia para desenvolver soluções educacionais que ampliam oportunidades e constroem novas possibilidades de aprendizagem.</p>
+          <div class="actions reveal">
+            <a href="#quem-somos" class="btn btn-primary">Conheça a Meta Educação</a>
+            <a href="#contato" class="btn btn-ghost">Entre em contato</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 480 480" class="orbit">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#FF8500" stop-opacity=".18"/>
+                <stop offset="1" stop-color="#FF8500" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="240" cy="240" r="230" fill="url(#glow)"/>
+            <g class="spin-slow" fill="none" stroke="#000" stroke-opacity=".1">
+              <circle cx="240" cy="240" r="200" stroke-dasharray="2 8"/>
+              <circle cx="240" cy="240" r="140"/>
+            </g>
+            <g stroke="#000" stroke-opacity=".18" stroke-width="1.2">
+              <line x1="240" y1="240" x2="100" y2="140"/>
+              <line x1="240" y1="240" x2="385" y2="120"/>
+              <line x1="240" y1="240" x2="400" y2="330"/>
+              <line x1="240" y1="240" x2="120" y2="370"/>
+              <line x1="100" y1="140" x2="385" y2="120" stroke-dasharray="4 6"/>
+              <line x1="400" y1="330" x2="120" y2="370" stroke-dasharray="4 6"/>
+            </g>
+            <g class="nodes">
+              <circle cx="100" cy="140" r="7" fill="#000"/>
+              <circle cx="385" cy="120" r="9" fill="#FF8500"/>
+              <circle cx="400" cy="330" r="6" fill="#000"/>
+              <circle cx="120" cy="370" r="8" fill="#FF8500"/>
+            </g>
+            <g class="core">
+              <rect x="180" y="180" width="120" height="120" rx="28" fill="#000"/>
+              <path d="M215 262 L240 212 L265 262 Z" fill="none" stroke="#FF8500" stroke-width="7" stroke-linejoin="round"/>
+            </g>
+          </svg>
+          <div class="chip chip-a"><span class="dot"></span>Inovação</div>
+          <div class="chip chip-b"><span class="dot"></span>Conhecimento</div>
+          <div class="chip chip-c"><span class="dot"></span>Tecnologia</div>
+        </div>
       </div>
     </section>
 
-    <section id="sobre" class="section">
-      <div class="container narrow">
-        <h2>Sobre nós</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
-      </div>
-    </section>
-
-    <section id="recursos" class="section alt">
+    <!-- 02 QUEM SOMOS -->
+    <section class="section bg-soft" id="quem-somos">
       <div class="container">
-        <h2>Recursos</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Lorem ipsum</h3>
-            <p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu.</p>
+        <div class="split">
+          <div>
+            <span class="eyebrow reveal">Quem somos</span>
+            <h2 class="reveal">Educação, inovação e tecnologia em um só <em>propósito</em>.</h2>
+          </div>
+          <div class="prose reveal">
+            <p>A Meta Educação é uma empresa brasileira que acredita no potencial da tecnologia para transformar a maneira como as pessoas acessam o conhecimento.</p>
+            <p>Nosso propósito é desenvolver soluções educacionais modernas, acessíveis e conectadas às necessidades de um mundo em constante evolução.</p>
+            <p>Acreditamos que a inovação deve aproximar pessoas de oportunidades, tornando a aprendizagem mais dinâmica, eficiente e inclusiva.</p>
+          </div>
+        </div>
+        <div class="cards cards-3">
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></div>
+            <h3>Inovação</h3>
+            <p>Exploramos novas tecnologias para desenvolver experiências educacionais mais modernas.</p>
           </article>
-          <article class="card">
-            <h3>Dolor sit</h3>
-            <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor.</p>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+            <h3>Acessibilidade</h3>
+            <p>Acreditamos em soluções que contribuam para ampliar o acesso ao conhecimento.</p>
           </article>
-          <article class="card">
-            <h3>Amet consectetur</h3>
-            <p>Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.</p>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></svg></div>
+            <h3>Transformação</h3>
+            <p>Utilizamos a educação como instrumento de desenvolvimento pessoal, profissional e social.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contato" class="section cta">
+    <!-- 03 SOLUÇÕES -->
+    <section class="section" id="solucoes">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Nossas soluções</span>
+          <h2 class="reveal">Tecnologia para impulsionar a <em>educação</em>.</h2>
+          <p class="lead reveal">Desenvolvemos nossa atuação a partir da integração entre conhecimento, inovação e soluções digitais.</p>
+        </div>
+        <div class="cards cards-3">
+          <article class="card card-solution reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+            <span class="num">01</span>
+            <h3>Plataformas Educacionais</h3>
+            <p class="tagline">Tecnologia que conecta pessoas ao conhecimento.</p>
+            <p>Soluções digitais voltadas à organização, disponibilização e acompanhamento de conteúdos e experiências de aprendizagem.</p>
+          </article>
+          <article class="card card-solution reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
+            <span class="num">02</span>
+            <h3>Educação Digital</h3>
+            <p class="tagline">Novas possibilidades para ensinar e aprender.</p>
+            <p>Iniciativas tecnológicas que buscam ampliar o acesso à educação, à qualificação profissional e ao desenvolvimento de competências.</p>
+          </article>
+          <article class="card card-solution reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg></div>
+            <span class="num">03</span>
+            <span class="badge">Em desenvolvimento</span>
+            <h3>Inteligência Artificial</h3>
+            <p class="tagline">Inovação aplicada ao futuro da aprendizagem.</p>
+            <p>Exploramos o potencial da inteligência artificial para apoiar o desenvolvimento de ferramentas educacionais mais inteligentes, interativas e personalizadas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 PROPÓSITO -->
+    <section class="section purpose" id="proposito">
+      <svg class="purpose-lines" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="#fff" stroke-opacity=".07">
+          <circle cx="1050" cy="120" r="180"/><circle cx="1050" cy="120" r="280"/><circle cx="1050" cy="120" r="380"/>
+        </g>
+        <g stroke="#FF8500" stroke-opacity=".5">
+          <line x1="870" y1="120" x2="1000" y2="300"/><line x1="1000" y1="300" x2="1150" y2="420"/>
+        </g>
+        <circle cx="870" cy="120" r="4" fill="#FF8500"/><circle cx="1000" cy="300" r="5" fill="#fff"/><circle cx="1150" cy="420" r="4" fill="#FF8500"/>
+      </svg>
       <div class="container narrow">
-        <h2>Vamos conversar?</h2>
-        <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam.</p>
-        <a href="mailto:contato@metaeducacao.com.br" class="btn btn-light">Fale conosco</a>
+        <span class="eyebrow reveal">Nosso propósito</span>
+        <h2 class="reveal">Acreditamos que o <em>conhecimento</em> transforma vidas.</h2>
+        <div class="prose reveal">
+          <p>A educação abre caminhos, cria oportunidades e impulsiona o desenvolvimento da sociedade.</p>
+          <p>Na Meta Educação, acreditamos que a tecnologia pode ampliar esse potencial, aproximando pessoas do conhecimento e contribuindo para um futuro com mais oportunidades.</p>
+        </div>
+        <p class="quote reveal">Conhecimento que <em>transforma</em>.<br>Tecnologia que <em>aproxima</em>.</p>
+      </div>
+    </section>
+
+    <!-- 05 CONTATO -->
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div>
+          <span class="eyebrow reveal">Contato</span>
+          <h2 class="reveal">Vamos construir o futuro da educação <em>juntos</em>?</h2>
+          <p class="lead reveal">Estamos abertos a novas conexões, projetos e oportunidades de colaboração.</p>
+          <p class="reveal muted">Entre em contato com a Meta Educação e descubra como podemos construir novas possibilidades por meio da tecnologia e do conhecimento.</p>
+          <div class="actions reveal">
+            <a class="btn btn-primary" href="mailto:comercial@metaeducacaobr.com.br?subject=Contato%20pelo%20site">Enviar e-mail</a>
+            <a class="btn btn-dark" href="https://wa.me/5593991565755?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20melhor%20a%20Meta%20Educa%C3%A7%C3%A3o%20e%20suas%20solu%C3%A7%C3%B5es." target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+          </div>
+        </div>
+        <ul class="contact-list reveal">
+          <li>
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <div><small>E-mail</small><a href="mailto:comercial@metaeducacaobr.com.br">comercial@metaeducacaobr.com.br</a></div>
+          </li>
+          <li>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><small>Telefone</small><a href="tel:+5593991565755">(93) 99156-5755</a></div>
+          </li>
+          <li>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><small>Localização</small><span>Belém, Pará, Brasil</span></div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">© 2026 Meta Educação. Todos os direitos reservados.</div>
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo-meta-white.png" alt="Meta Educação" class="footer-logo" width="744" height="308" loading="lazy">
+        <p class="footer-quote">Conhecimento que transforma. Tecnologia que aproxima.</p>
+      </div>
+      <div class="footer-info">
+        <p><strong>Meta Educação LTDA</strong></p>
+        <p>CNPJ: 41.916.922/0001-20</p>
+        <p>Belém, Pará, Brasil</p>
+        <p><a href="mailto:comercial@metaeducacaobr.com.br">comercial@metaeducacaobr.com.br</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Meta Educação. Todos os direitos reservados.</span>
+      <a href="privacidade.html">Política de Privacidade</a>
+    </div>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
